@@ -9,13 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        
+        // Simple link with the title and with te destination
+        Link("Go to Apple", destination: URL(string: "https://apple.com")!).padding()
+        
     }
 }
 
