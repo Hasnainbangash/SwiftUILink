@@ -13,6 +13,27 @@ struct ContentView: View {
         // Simple link with the title and with te destination
         Link("Go to Apple", destination: URL(string: "https://apple.com")!).padding()
         
+        // Customs links
+        // Different links with different styles
+        Link("Go to Apple", destination: URL(string: "https://apple.com")!)
+            .buttonStyle(.borderless)
+        
+        Link("Call To Action", destination: URL(string: "tel:1234567890")!)
+            .buttonStyle(.bordered)
+            .buttonBorderShape(.roundedRectangle)
+            .controlSize(.regular)
+        
+        Link("Send an Email", destination: URL(string: "mailto:swiftui@apple.com")!)
+            .buttonStyle(.borderedProminent)
+            .buttonBorderShape(.capsule)
+            .controlSize(.large)
+            .tint(.pink)
+        
+        Link("Credo Academy", destination: URL(string: "https://credo.academy")!)
+            .buttonStyle(.plain)
+            .padding()
+            .border(.primary, width: 2)
+        
     }
 }
 
